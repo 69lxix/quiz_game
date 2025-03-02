@@ -1,0 +1,60 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="loader.css">
+<link rel="stylesheet" href="style.css">
+<style>
+    .form { align-items: center; text-align: center; }
+    .btn { width: 40%; border-radius: 8px; }
+    .bg { height: 80px; display: flex; align-items: center; padding: 10px; }
+    #backButton { padding: 10px; font-size: 24px; color: #fff; border-radius: 125px; border: 1px solid #fff; background: transparent; }
+    #matchesContainer { background: #fff; height: 100vh; border-radius: 25px; }
+    .win { font-weight: 500; color: #02192e; font-size: 18px; background: #6bb7f5; display: flex; flex-direction: column; align-items: center; padding: 10px; width: 70px; border-radius: 12px; }
+    .match-card { display: flex; align-items: center; justify-content: space-around; margin: 20px 0 0 0; }
+    .white > h2 { font-weight: 400; text-align: center; margin: 10px; }
+    .entry { color: #02192e; font-size: 20px; font-weight: 500; }
+    .win > span { font-size: 20px; font-weight: 600; color: #fff;}
+    .play { display: flex; align-items: center; justify-content: center; padding: 10px; border-radius: 125px; border: none; width: 50px; height: 50px; font-size: 18px; gap: 10px; flex-direction: row-reverse; background: #02192e; color: #fff; font-weight: 500; }
+    .disco-hr { margin: 10px 20px; }
+    .footer { gap: 150px; display: flex; justify-content: space-around; position: fixed; background: #10364e; bottom: 0; padding: 20px 10px; width: 100%; }
+    .footer > a { font-size: 24px; color: #fff; }
+    .home { position: fixed; bottom: 3%; background: #10364e; padding: 15px; border-radius: 125px; border: 2px solid #02192e; }
+    .image > img { border-radius: 125px; }
+</style>
+<div id="userInfo" class="form">
+    <div class="image">
+        <img src="https://i.ibb.co/CKy8xSQN/icon.png">
+    </div>
+    <p style="display: none;"><b>Email:</b> <span id="userEmail"></span></p>
+    <p style="display: none;"><b>Coins:</b> <span id="userCoins"></span></p>
+    <h2>About The Game</h2>
+    <p>This earning app lets users play single-digit matches every minute by answering simple questions. With an intuitive interface, it offers a fun and rewarding experience for quick and easy earnings.</p>
+    <button id="battleButton" class="btn">Battles</button>
+</div>
+<div id="loader" style="display: none;"><div class="loader"></div></div>
+
+<div id="dashboard" style="display: none;">
+    <h2>Available Matches</h2>
+</div>
+
+<div id="matchesPage" style="display: none;">
+    <div class="bg">
+        <button id="backButton"><i class="fa-solid fa-arrow-left"></i></button>
+    </div>
+    <div class="white"> 
+        <h2>Play And Win!</h2>
+        <div id="matchesContainer"></div>
+    </div>
+</div>
+
+<div class="footer">
+    <a href="refer.html"><i class="fa-solid fa-gift"></i></a>
+    <a onclick="reload()" class="home"><i class="fa-solid fa-house"></i></a>
+    <a href="add_coins.html"><i class="fa-solid fa-coins"></i></a>
+</div>
+<script src="script.js"></script>
+<script>
+    function reload(){
+        location.reload();
+    }
+</script>
